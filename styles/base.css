@@ -1,14 +1,17 @@
-:root {
-    --dark-blue-gray: #1F2833;
-    --light-gray: #ffffff;
-    --light-cyan: #66FCF1;
-    --teal: #45A29E;
-}
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+
+:root {
+    --dark-blue-gray: #1F2833;
+    --light-gray: #ffffff;
+    --light-cyan: #66FCF1;
+    --teal: #45A29E;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -17,12 +20,13 @@ body {
     color: var(--light-gray);
 }
 
+
 header {
     background: linear-gradient(90deg, var(--teal), var(--light-cyan));
     padding: 20px;
     text-align: center;
     position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: var(--box-shadow);
 }
 
 header h1 {
@@ -35,7 +39,7 @@ header nav {
     justify-content: space-around;
     background-color: var(--dark-blue-gray);
     padding: 15px;
-    border-top: 2px solid var(--light-cyan); 
+    border-top: 2px solid var(--light-cyan);
 }
 
 header nav a {
@@ -51,10 +55,10 @@ a:hover {
     transition: color 0.3s ease-in-out;
 }
 
-
 header nav a:focus, footer a:focus {
     outline: 3px solid var(--light-cyan);
 }
+
 
 main {
     display: grid;
@@ -69,9 +73,9 @@ main {
 .card {
     background-color: var(--light-gray);
     border-radius: 8px;
-    padding: 20px;
+    padding: 1em;
     border: 1px solid var(--teal);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -79,34 +83,6 @@ main {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
-.about-me {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px; 
-    padding: 20px;
-    background-color: var(--dark-gray);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.about-me img {
-    max-width: 150px; 
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    order: 2; 
-}
-
-.about-me p {
-    color: var(--light-gray);
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin: 0;
-    order: 1; 
-}
-
 
 .card h2, .card h3 {
     text-align: center;
@@ -126,10 +102,30 @@ main {
     border-radius: 8px;
 }
 
-img {
-    border: 3px solid var(--light-cyan);
+
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+    padding: 20px;
+    background-color: var(--dark-blue-gray);
     border-radius: 10px;
+    box-shadow: var(--box-shadow);
 }
+
+.about-me img, .flag-image {
+    max-width: 150px;
+    height: auto;
+}
+
+.about-me p {
+    color: var(--light-gray);
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0;
+}
+
 
 .card3 {
     display: flex;
@@ -139,15 +135,23 @@ img {
     border: 1px solid var(--teal);
     background-color: var(--light-gray);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
 }
 
-.card3 h3 {
+.card3 > h3 {
     font-size: 1.5rem;
     color: var(--dark-blue-gray);
     text-align: center;
     margin-bottom: 10px;
 }
+
+.card3 p {
+    color: var(--dark-blue-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
 
 .flag-container {
     display: flex;
@@ -162,26 +166,11 @@ img {
     margin: 0;
 }
 
-.flag-image {
-    width: 150px;
-    height: auto;
-    border: 3px solid var(--light-cyan);
-    border-radius: 8px;
-}
-
 figcaption {
     font-size: 0.9rem;
     color: var(--dark-blue-gray);
     margin-top: 5px;
 }
-
-.card3 p {
-    color: var(--dark-blue-gray);
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 400px; /* Adjust width as needed */
-}
-
 
 
 footer {
@@ -210,18 +199,40 @@ footer .lastmodifiedcolor {
     background-color: rgba(102, 252, 241, 0.1);
 }
 
-@media screen and (max-width: 768px){
+
+img {
+    border: 3px solid var(--light-cyan);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+
+@media screen and (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
         padding: 10px;
-        }
+    }
 
     .card {
-        margin: 10px 0;
-        padding: 15px;
-        }
+        margin: 2% 0;
+        padding: 10px;
+    }
 
     header h1 {
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 10px;
     }
 }
