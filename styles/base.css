@@ -210,17 +210,18 @@ footer .lastmodifiedcolor {
     background-color: rgba(102, 252, 241, 0.1);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
     main {
         grid-template-columns: 1fr;
         padding: 10px;
-    }
+        }
 
     .card {
         margin: 10px 0;
         padding: 15px;
-    }
+        }
 
     header h1 {
         font-size: 2rem;
+    }
 }
