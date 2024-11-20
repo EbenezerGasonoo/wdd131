@@ -1,10 +1,11 @@
 body {
-    font-family: 'Roboto'; sans-serif
+    font-family: 'Roboto'; sans-serif;
+    
 }
 
 
-header,main,footer{
-    max-width: 640px ;
+header,main,footer  {
+    max-width: 640px;
     margin: 1rem auto;
     border: 1px solid #bbb;
     padding: 1rem;
@@ -12,7 +13,7 @@ header,main,footer{
 } 
 
 main {
-        display:grid;
+        display: grid;
         grid-template-columns: 1fr;
         grid-gap: 1rem;
 }
