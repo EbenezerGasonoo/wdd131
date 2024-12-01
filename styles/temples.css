@@ -1,6 +1,5 @@
-
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Outfit', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -13,6 +12,11 @@ header {
     background-color: #004b87;
     color: white;
     padding: 5px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center; 
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
     
 }
 
@@ -30,23 +34,26 @@ nav a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    float:right;
-    
+    float: right;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
     color:#004b87;
     background-color: white;
     border-radius: 5px;
+    text-decoration: underline; 
+    transform: scale(1.1); 
+    transition: all 0.3s ease; 
 }
 
-#hamburger {
+.hamburger {
     background: none;
     border: none;
     color: white;
-    font-size: 1.5rem;
-    justify-items:right;
+    font-size: 2rem;
     cursor: pointer;
+    display: block;
 
 }
 
@@ -66,12 +73,25 @@ h2 {
 
 .album-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
 figure {
-    margin: 0;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    backdrop-filter: blur(5px); /* Glass effect on album cards */
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* More shadow on hover */
 }
 
 img {
@@ -80,6 +100,15 @@ img {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #004b87; /* Complementary text color */
+}
+
 
 footer {
     background-color: #004b87;
