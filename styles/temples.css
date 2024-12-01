@@ -1,64 +1,101 @@
+/* Base styles */
 body {
     font-family: 'Outfit', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
-h1{
+
+h1 {
     text-align: left;
     margin-top: 10px;
 }
+
 header {
     background-color: #004b87;
     color: white;
-    padding: 5px;
-    justify-content: space-between;
     display: flex;
-    align-items: center; 
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
+
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Default for mobile */
     align-items: center;
     background-color: #004b87;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    display: none; /* Hide on mobile by default */
+}
+
+nav ul.visible {
+    display: block; /* Show when visible class is added */
 }
 
 nav a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    float: right;
     transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color:#004b87;
+    color: #004b87;
     background-color: white;
     border-radius: 5px;
-    text-decoration: underline; 
-    transform: scale(1.1); 
-    transition: all 0.3s ease; 
+    text-decoration: underline;
+    transform: scale(1.1);
 }
 
+/* Hamburger Button Styles */
 .hamburger {
     background: none;
     border: none;
     color: white;
     font-size: 2rem;
     cursor: pointer;
-
+    display: none; /* Hide by default */
 }
 
-.hidden {
-    display: none;
+/* Close button (X) */
+.close {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hide by default */
 }
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none; 
+    }
+
+    nav ul.visible {
+        display: block; 
+    }
+}
+
 
 main {
     max-width: 90%;
@@ -107,7 +144,6 @@ figcaption {
     font-size: 1rem;
     color: #004b87; /* Complementary text color */
 }
-
 
 footer {
     background-color: #004b87;
