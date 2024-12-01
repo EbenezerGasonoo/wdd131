@@ -21,6 +21,9 @@ header {
     margin-bottom: 1rem;
 }
 
+ul {
+    list-style-type: none;
+}
 
 nav ul {
     list-style-type: none;
