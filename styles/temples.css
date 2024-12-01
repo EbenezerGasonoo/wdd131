@@ -27,24 +27,25 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Default for mobile */
+    flex-direction: column; 
     align-items: center;
     background-color: #004b87;
     position: absolute;
     top: 40px;
     left: 0;
     width: 100%;
-    display: none; /* Hide on mobile by default */
+    display: none; 
 }
 
 nav ul.visible {
-    display: block; /* Show when visible class is added */
+    display: block; 
 }
 
 nav a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    float: right;
     transition: all 0.3s ease;
 }
 
@@ -56,27 +57,27 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* Hamburger Button Styles */
+
 .hamburger {
     background: none;
     border: none;
     color: white;
     font-size: 2rem;
     cursor: pointer;
-    display: none; /* Hide by default */
+    display: none; 
 }
 
-/* Close button (X) */
+
 .close {
     font-size: 2rem;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
-    display: none; /* Hide by default */
+    display: none; 
 }
 
-/* Mobile View */
+
 @media screen and (max-width: 768px) {
     .hamburger {
         display: block; 
@@ -116,18 +117,18 @@ h2 {
 }
 
 figure {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-    border-radius: 10px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 10px; 
     padding: 10px;
-    backdrop-filter: blur(5px); /* Glass effect on album cards */
+    backdrop-filter: blur(5px); 
     -webkit-backdrop-filter: blur(5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 figure:hover {
-    transform: scale(1.05); /* Slight enlargement on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* More shadow on hover */
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 img {
@@ -142,7 +143,7 @@ figcaption {
     margin-top: 0.5rem;
     font-weight: bold;
     font-size: 1rem;
-    color: #004b87; /* Complementary text color */
+    color: #004b87; 
 }
 
 footer {
