@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Ebenezer Gasonoo</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Ebenezer Gasonoo. Exploring web development fundamentals with dynamic and engaging projects.">
+    <meta name="author" content="Ebenezer Gasonoo">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>WDD 131 - Ghana Cocoa farms</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/farms.webp" media="(min-width: 800px)">
+                <source srcset="images/farms-large.webp" media="(min-width: 1000px)">
+                <img src="images/farms.webp" alt="Ghanaian Cocoa farms">
+            </picture>
+        </div>
+        <div class="data">
+            <h1>Data</h1>
+            <ul>
+                <li><b>Area:</b> 238,533 sq km</li>
+                <li><b>Population:</b> 34,120,000</li>
+                <li><b>Capital:</b> Accra</li>
+                <li><b>Languges:</b> Ewe,English,Twi,Ghana,Hausa</li>
+                <li><b>Currency:</b> Ghana Cedis(GHS)</li>
+                <li><b>Time Zone:</b> GMT+00</li>
+                <li><b>Calling Code:</b> +233</li>
+                <li><b>Internet TLD:</b> .gh</li>
+            </ul>
+        </div>
+        <div class="weather">
+            <h1>Weather</h1>
+            <picture>
+                <img src="images/sunny.svg" alt="weather icon">
+            </picture>
+            <ul>
+                <li id="temp"></li>
+                <li><b>Conditions: </b>Sunny</li>
+                <li id="wind"></li>
+                <li id="windChill"></li>
+            </ul>
+        </div>
+    </main>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> 🤓 Ebenezer Gasonoo 🤓, Tema, Ghana</p>
+        <p>Last Modified: <span id="lastModified"></span> </p>
+    </footer>
+</body>
+</html>
