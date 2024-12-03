@@ -3,27 +3,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Ebenezer Gasonoo</title>
+    <title>Country and Place</title>
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Ebenezer Gasonoo. Exploring web development fundamentals with dynamic and engaging projects.">
     <meta name="author" content="Ebenezer Gasonoo">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>WDD 131 - Ghana Cocoa farms</h1>
+        <h1>Ghana Cocoa farms</h1>
     </header>
     <main>
-        <div class="hero">
             <picture>
-                <source srcset="images/farms.webp" media="(min-width: 800px)">
                 <source srcset="images/farms-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/farms-medium.webp" media="(min-width: 800px)">
                 <img src="images/farms-small.webp" alt="Ghanaian Cocoa farms">
             </picture>
-        </div>
-        <div class="data">
-            <h1>Data</h1>
+        </section>
+        <section class="data">
+            <h2>Data</h2>
             <ul>
                 <li><b>Area:</b> 238,533 sq km</li>
                 <li><b>Population:</b> 34,120,000</li>
@@ -34,19 +34,15 @@
                 <li><b>Calling Code:</b> +233</li>
                 <li><b>Internet TLD:</b> .gh</li>
             </ul>
+        </section>
         </div>
-        <div class="weather">
-            <h1>Weather</h1>
-            <picture>
-                <img src="images/sunny.svg" alt="weather icon">
-            </picture>
-            <ul>
-                <li id="temp"></li>
-                <li><b>Conditions: </b>Sunny</li>
-                <li id="wind"></li>
-                <li id="windChill"></li>
-            </ul>
-        </div>
+        <section class="weather">
+            <h2>Weather</h2>
+            <img id="svg" src="images/weather.svg" alt="Weather Icon" class="weather-icon">
+            <p>Temperature: <span id="temperature">10°C</span></p>
+            <p>Wind Speed: <span id="windSpeed">5 km/h</span></p>
+            <p>Wind Chill: <span id="windChill">N/A </span></p>
+        </section>
     </main>
     </main>
     <footer>
