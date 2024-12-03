@@ -73,12 +73,12 @@ img {
 
 
 #svg {
-    display: block; /* SVG is visible in mobile view */
+    display: block; 
 }
 
 @media (min-width: 800px) {
     #svg {
-        display: none; /* Hide the SVG on larger screens */
+        display: none; 
     }
 }
 
