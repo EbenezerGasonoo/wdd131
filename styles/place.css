@@ -27,14 +27,12 @@ header {
     padding: var(--spacing-medium);
 }
 
-
 img {
     width: 100%;
     height: auto;
     object-fit: cover;
     overflow: hidden;
 }
-
 
 .data, 
 .weather {
@@ -73,15 +71,15 @@ img {
     width: 80%; 
 }
 
-header::after {
-    content: " 🌄";
-    font-size: 1.5rem;
-    margin-left: 0.5rem;
-}
-
 
 #svg {
-    display: block;
+    display: block; /* SVG is visible in mobile view */
+}
+
+@media (min-width: 800px) {
+    #svg {
+        display: none; /* Hide the SVG on larger screens */
+    }
 }
 
 .weather-icon {
@@ -89,7 +87,6 @@ header::after {
     height: auto;
     margin: 1rem 0;
 }
-
 
 footer {
     text-align: center;
