@@ -1,41 +1,43 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temples Album</title>
-    <meta name="description" content="Picture Album WDD 131 Dynamic Web Fundamentals Ebenezer Gasonoo">
+    <meta name="description" content="WDD 131 - Enhance Picture Album Web Fundamentals -Ebenezer Gasonoo - Temples">
     <meta name="author" content="Ebenezer Gasonoo">
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
-    <script src="scripts/temples.js" defer></script>
+    <title>WDD 131 - Dynamic Web Fundamentals - Jose Diaz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
 </head>
+
 <body>
-    <header class="header">
+    <header>
         <h1>Temple Album</h1>
-        <nav>
-            <button class="hamburger">&#9776;</button>
-            <button class="close">&times;</button>
-          <ul class="hidden">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Old</a></li>
-            <li><a href="#">New</a></li>
-            <li><a href="#">Large</a></li>
-            <li><a href="#">Small</a></li>
-          </ul>
+        <button id="menu"></button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="filtered-temples.html">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <h2>Home</h2>
-        <div class="container">
-        </div>
+        <section class="card">
+            <h2>Home</h2>
+            <div id="temples" class="temples"></div>
+        </section>
     </main>
     <footer>
-        <p>© <span id="currentyear"></span> 🤓 Ebenezer Gasonoo 🤓, Tema, Ghana</p>
-        <p>Last Modified: <span id="lastModified"></span> </p>
+        <p>©<span id="year"></span> 🤓 Ebenezer Gasonoo 🤓, Tema, Ghana</p>
+        <p id="lastmodified">Last Modified: </p>
     </footer>
 </body>
 </html>
