@@ -75,4 +75,28 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
     // Add more temple objects here...
+    {
+      templeName: "Accra Ghana Temple",
+      location: "Accra, Ghana",
+      dedicated: "2004, January, 11",
+      area: 17500,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-13760-main.jpg"
+    },
+    {
+      templeName: "Abidjan Ivory Coast Temple",
+      location: "Cocody Abidjan",
+      dedicated: "2025, May, 25",
+      area: 17500,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleriesabidjan-ivory-coast-temple/abidjan-ivory-coast-temple-1108-main.jpg"
+    },
+    {
+      templeName: "Austin Texas Temple",
+      location: "Cedar Park, Texas",
+      dedicated: "2024, August, 17",
+      area: 30000,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/austin-texas-temple/austin-texas-temple-40361-main.jpg"
+    },
   ];
