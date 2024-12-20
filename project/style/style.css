@@ -60,6 +60,40 @@ header nav ul li a:hover {
     width: 100%;
 }
 
+.hero-large {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Set maximum height for large images */
+    margin-bottom: 20px;
+    overflow: hidden; /* Prevent the image from overflowing */
+}
+
+.hero-large img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure the image covers the entire space without stretching */
+    border-radius: 10px; /* Apply rounded corners */
+}
+
+/* Ensure the image does not distort or lose aspect ratio */
+.hero-large img {
+    display: block; /* Remove any unwanted spaces below the image */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio without stretching */
+}
+
+@media (max-width: 768px) {
+    .hero-large {
+        max-height: 400px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-large {
+        max-height: 300px; /* Adjust height for mobile screens */
+    }
+}
 
 /* Hero Small Section */
 .hero-small {
