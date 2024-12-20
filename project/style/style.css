@@ -10,6 +10,7 @@ body {
     font-family: 'Outfit', sans-serif; /* Heading font for entire page */
     background-color: #ffffff; /* Secondary color for background */
     color: #004b87; /* Primary color for text */
+    line-height: 1.6;
 }
 
 /* Header */
@@ -58,6 +59,7 @@ header nav ul li a:hover {
 
 .hero-large {
     width: 100%;
+    height: auto;
     max-height: 500px;
     margin-bottom: 30px;
 }
@@ -69,15 +71,38 @@ header nav ul li a:hover {
     border-radius: 10px;
 }
 
-.hero-text {
+.hero-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
     text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px; /* Limit image width for better display */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-text {
     max-width: 800px;
+    margin-top: 20px;
 }
 
 .hero-text h1 {
     font-size: 36px;
     margin-bottom: 15px;
-    color: #004b87; /* Primary color for headings */
+    color: #004b87;
 }
 
 .hero-text p {
@@ -142,7 +167,7 @@ header nav ul li a:hover {
 .services h2 {
     font-size: 30px;
     margin-bottom: 40px;
-    color: #004b87; /* Primary color for headings */
+    color: #004b87;
 }
 
 .service-cards {
