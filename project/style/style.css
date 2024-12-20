@@ -7,9 +7,9 @@
 
 /* Body and Layout */
 body {
-    font-family: 'Outfit', sans-serif; /* Heading font for entire page */
-    background-color: #ffffff; /* Secondary color for background */
-    color: #004b87; /* Primary color for text */
+    font-family: 'Outfit', sans-serif;
+    background-color: #ffffff;
+    color: #004b87;
     line-height: 1.6;
 }
 
@@ -18,14 +18,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #004b87; /* Primary color for header */
+    background-color: #004b87;
     padding: 15px 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
     font-size: 30px;
-    color: #ffffff; /* White text on dark header */
+    color: #ffffff;
 }
 
 header nav ul {
@@ -39,7 +39,7 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: #ffffff; /* White text for links */
+    color: #ffffff;
     font-size: 18px;
     font-weight: 500;
 }
@@ -54,35 +54,38 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f4f9fc; /* Light background to contrast the hero section */
+    justify-content: center;
+    background-color: #f4f9fc;
+    text-align: center;
+    width: 100%;
 }
 
 .hero-large {
     width: 100%;
     height: auto;
     max-height: 500px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .hero-large img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
 }
 
 .hero-small {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
 }
 
 .hero-image {
     width: 100%;
-    max-width: 500px; /* Limit image width for better display */
+    max-width: 500px;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -119,16 +122,17 @@ header nav ul li a:hover {
 /* About Us Section */
 .about-us {
     background-color: #ffffff;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
 .about-us-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .about-image {
@@ -140,7 +144,7 @@ header nav ul li a:hover {
 .about-image img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
     object-fit: cover;
 }
 
@@ -151,7 +155,7 @@ header nav ul li a:hover {
 }
 
 .about-text p {
-    background-color: rgba(0, 75, 135, 0.1); /* Light overlay with primary color */
+    background-color: rgba(0, 75, 135, 0.1);
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -184,7 +188,7 @@ header nav ul li a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
@@ -235,20 +239,22 @@ input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 12px;
+    margin-top: 8px;
     border: 1px solid #004b87;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 button {
     background-color: #004b87;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -269,12 +275,11 @@ footer {
 
 footer .contact-btn {
     background-color: #ffffff;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
     color: #004b87;
     border-radius: 5px;
     font-size: 18px;
-    font-family: 'Outfit', sans-serif;
 }
 
 footer .contact-btn:hover {
