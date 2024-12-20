@@ -60,18 +60,6 @@ header nav ul li a:hover {
     width: 100%;
 }
 
-.hero-large {
-    width: 100%;
-    height: auto;
-    max-height: 600px; /* Increase max-height for larger screens */
-    margin-bottom: 20px;
-}
-
-.hero-large img, .about-image img, .service-cards img {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; /* Ensures images fill container without distortion */
-}
 
 /* Hero Small Section */
 .hero-small {
