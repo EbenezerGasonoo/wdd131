@@ -1,10 +1,3 @@
-const currentyear = document.querySelector("#currentyear");
-const lastmodified = document.querySelector("#lastModified");
-
-const today = new Date();
-currentyear.innerHTML = today.getFullYear();
-lastmodified.innerHTML = document.lastModified;
-
 const products = [
   {
     "id": "cp-1024",
@@ -31,30 +24,54 @@ const products = [
     "name": "virtual reality headset",
     "averagerating": 4.9
   }
-]
-  
-  function updateProducts(productList) {
-    const selectBox = document.getElementById("product-name");
-  
-    productList.forEach((product) => {
-      const bob = document.createElement("option");
-      bob.value = product.averagerating;
-      bob.innerText = product.name;
-      bob.id = product.id;
-  
-      selectBox.appendChild(bob);
-    });
-  }
-  
-  updateProducts(products);
-  
-  if (!localStorage.getItem("reviewcounter")) {
-    localStorage.setItem("reviewcounter", 0);
-  }
-  
-  const reviewform = document.getElementById("reviewform");
-  reviewform.addEventListener("submit", () => {
-    let currentCounter = parseInt(localStorage.getItem("reviewcounter"), 10);
-    currentCounter += 1;
-    localStorage.setItem("reviewcounter", currentCounter);
+];
+
+function updateProducts(productList) {
+  const selectBox = document.getElementById("product-name");
+
+  productList.forEach((product) => {
+    const tech = document.createElement("option");
+    tech.value = product.averagerating;
+    tech.innerText = product.name;
+    tech.id = product.id;
+
+    selectBox.appendChild(tech);
   });
+}
+
+updateProducts(products);
+
+
+const currentyear = document.querySelector("#currentyear");
+const today = new Date();
+currentyear.innerHTML = today.getFullYear();
+
+
+if (!localStorage.getItem("reviewcounter")) {
+  localStorage.setItem("reviewcounter", 0);
+}
+
+
+let currentCounter = parseInt(localStorage.getItem("reviewcounter"), 10);
+currentCounter += 1;
+localStorage.setItem("reviewcounter", currentCounter);
+
+
+const reviewCount = document.querySelector("#review-count");
+reviewCount.innerText = currentCounter;
+
+
+const reviewform = document.getElementById("reviewform");
+reviewform.style.display = "none"; 
+const thankYouMessage = document.createElement("p");
+thankYouMessage.innerText = "Thank you for your submission!";
+document.body.appendChild(thankYouMessage);
+
+
+setTimeout(() => {
+  window.location.href = "form.html"; 
+}, 3000);
+
+
+const lastmodified = document.querySelector("#lastModified");
+lastmodified.innerHTML = document.lastModified;
